@@ -60,3 +60,7 @@ add_action('init', function() {
       remove_action('wp_head', array(visual_composer(), 'addMetaData'));
    }
 });
+
+if(class_exists('RevSliderFront')) {
+   add_filter('revslider_meta_generator', function() { return ''; });
+}
