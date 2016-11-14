@@ -59,6 +59,9 @@ add_action('init', function() {
    if(function_exists('visual_composer')) {
       remove_action('wp_head', array(visual_composer(), 'addMetaData'));
    }
+   if(defined('W3TC') && W3TC) {
+	   add_filter('w3tc_can_print_comment', '__return_false', 10, 1);
+   }
 });
 
 if(class_exists('RevSliderFront')) {
