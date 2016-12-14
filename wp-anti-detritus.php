@@ -15,6 +15,7 @@ add_action('admin_bar_menu', function($wp_admin_bar) { $wp_admin_bar->remove_nod
 add_filter('admin_footer_text', function() { return ''; });
 add_action('login_headerurl', function() { return home_url(); });
 add_filter('get_image_tag_class', function($class, $id, $align, $size) { return 'align'.esc_attr($align); }, 10, 4);
+add_filter('emoji_svg_url', '__return_false');
 
 add_filter('body_class', function($classes) {
    global $post;
@@ -56,6 +57,7 @@ add_action('init', function() {
    add_filter('json_jsonp_enabled', '__return_false');
    add_filter('rest_enabled', '__return_false');
    add_filter('rest_jsonp_enabled', '__return_false');
+   wp_deregister_script('wp-embed');
    if(function_exists('visual_composer')) {
       remove_action('wp_head', array(visual_composer(), 'addMetaData'));
    }
