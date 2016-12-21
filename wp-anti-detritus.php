@@ -12,7 +12,7 @@
 if(!defined('ABSPATH')) { exit; }
 
 add_action('admin_bar_menu', function($wp_admin_bar) { $wp_admin_bar->remove_node( 'wp-logo' ); }, 999);
-add_filter('admin_footer_text', function() { return ''; });
+add_filter('admin_footer_text', '__return_null');
 add_action('login_headerurl', function() { return home_url(); });
 add_filter('get_image_tag_class', function($class, $id, $align, $size) { return 'align'.esc_attr($align); }, 10, 4);
 add_filter('emoji_svg_url', '__return_false');
@@ -62,10 +62,10 @@ add_action('init', function() {
       remove_action('wp_head', array(visual_composer(), 'addMetaData'));
    }
    if(defined('W3TC') && W3TC) {
-	   add_filter('w3tc_can_print_comment', '__return_false', 10, 1);
+	   add_filter('w3tc_can_print_comment', '__return_false');
    }
 });
 
 if(class_exists('RevSliderFront')) {
-   add_filter('revslider_meta_generator', function() { return ''; });
+   add_filter('revslider_meta_generator', '__return_null');
 }
