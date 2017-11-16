@@ -67,6 +67,10 @@ add_action('init', function() {
    }
 });
 
+add_action('wp_dashboard_setup', function() {
+	remove_meta_box( 'woocommerce_dashboard_status', 'dashboard', 'normal');
+});
+
 if(class_exists('RevSliderFront')) {
    add_filter('revslider_meta_generator', '__return_null');
 }
