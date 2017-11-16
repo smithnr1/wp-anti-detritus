@@ -1,5 +1,5 @@
 # WP Anti-Detritus
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://fpcs.mit-license.org) ![Tested to: WP 4.8.x](https://img.shields.io/badge/tested%20up%20to-WP%204.8.x-brightgreen.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://fpcs.mit-license.org) [![Tested up to: WP 4.8.x](https://img.shields.io/badge/tested%20up%20to-WP%204.8.x-brightgreen.svg)](https://wordpress.org/)
 
 WordPress is a full-fat CMS. Trim it some with this plugin.
 
