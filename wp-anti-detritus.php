@@ -69,6 +69,9 @@ add_action('init', function() {
 
 add_action('wp_dashboard_setup', function() {
 	remove_meta_box( 'woocommerce_dashboard_status', 'dashboard', 'normal');
+	remove_meta_box('dashboard_right_now', 'dashboard', 'normal'); // "At a Glance"
+	remove_meta_box('dashboard_quick_press', 'dashboard', 'side'); // "Quick Draft"
+	remove_meta_box('dashboard_primary', 'dashboard', 'core'); // "Events & News"
 });
 
 if(class_exists('RevSliderFront')) {
